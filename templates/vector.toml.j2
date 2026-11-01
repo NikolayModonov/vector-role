@@ -1,0 +1,10 @@
+[sources.in]
+  type = "syslog"
+  address = "0.0.0.0:514"
+
+[sinks.out]
+  type = "clickhouse"
+  inputs = ["in"]
+  endpoint = "http://127.0.0.1:8123"
+  table = "logs"
+  database = "logs"
